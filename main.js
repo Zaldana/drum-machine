@@ -7,25 +7,24 @@ const tock = new Audio('sounds/tock.mp3');
 // This function is called every 600ms
 function update() {
 
-    // Play the 'tick' sound
-    
-    count += 1;
-    
-    console.log(count);
-
-    if (count === 4) {
-
-    tock.play();
-    
-
-    } if (count <= 3)  {
+    if (count <= 3) {
 
         tick.play();
+
+
+    } if (count > 3) {
+
+        tock.play();
 
     } if (count >= 4) {
 
         count = 0;
     }
+
+    count += 1;
+
+    console.log(count);
+    document.getElementById("count").textContent = "Count: " + count;
 
 }
 
