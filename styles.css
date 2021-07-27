@@ -52,11 +52,11 @@ body {
     border: 6px dashed #e07a5f;
 }
 
-/* @keyframes tick {
+@keyframes tick {
     0%   { transform: rotate(-30deg); }
     50%  { transform: rotate(30deg);  }
     100% { transform: rotate(-30deg); }
-} */
+}
 
 .arm {
     height: 300px;
