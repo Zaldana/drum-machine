@@ -29,9 +29,9 @@ function update() {
 }
 
 // This function sets up update() to be called every 600ms
-function setupUpdate() {
-    setInterval(update, 600);
-}
+// function setupUpdate() {
+//     setInterval(update, 600);
+// }
 
-// Call setupUpdate() once after 300ms
-setTimeout(setupUpdate, 300);
+// // Call setupUpdate() once after 300ms
+// setTimeout(setupUpdate, 300);
