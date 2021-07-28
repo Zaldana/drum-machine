@@ -11,8 +11,11 @@ const tock = new Audio('sounds/tock.mp3');
 
 //Helper Functions ====================================================
 
+
 //Interval function
-const startInt = function () { setInterval(metronomeUpdate, 300); }
+let intId = 0;
+
+const startInt = function () { intId = setInterval(metronomeUpdate, 300); }
 
 //count variable
 let count = 0;
@@ -42,7 +45,9 @@ $('input[name=start]').change(function () {
     if (this.checked) {
        startInt();
     } else {
-        location.reload();
+        count = 0;
+        clearInterval(intId);
+        $("#display-text").text("Count: " + count);  
     }
 });
 
