@@ -138,6 +138,7 @@ function snareUpdate() {
         snareDrum.load();
         snareDrum.play();
     } if ($('#snare-8').prop('checked') && count == 8) {
+        snareDrum.load();
         snareDrum.play();
     }
 
