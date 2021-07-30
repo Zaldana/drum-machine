@@ -11,10 +11,8 @@ const tock = new Audio('sounds/tock.mp3');
 
 //Helper Functions ====================================================
 
-
 //Interval function
 let intId = 0;
-
 const startInt = function () { intId = setInterval(metronomeUpdate, 300); }
 
 //count variable
@@ -38,7 +36,7 @@ $('body').click(function () {
 });
 
 
-//Start Button =======================================================
+//Start/Stop Button =======================================================
 
 $('input[name=start]').change(function () {
     
@@ -49,6 +47,7 @@ $('input[name=start]').change(function () {
         clearInterval(intId);
         $("#display-text").text("Count: " + count);  
     }
+
 });
 
 // Audio functions ===================================================
@@ -181,176 +180,3 @@ function hiUpdate() {
     }
 
 };
-
-
-//Query Selectors=======================================================
-
-// //Count
-// const countDisplay = $("#count");
-
-// //Instruments
-// const metronome = $('#metronome');
-// const kick = $('#kick-drum');
-// const hiHat = $('#hi-hat');
-// const snare = $('#snare');
-
-// //Beat Numbers
-// const snareNumber = $('#snare-number');
-// const kickNumber = $('#kick-number');
-// const hatNumber = $('#hihat-number');
-
-// //Samples ========================================================
-
-// //Click track
-// const tick = new Audio('sounds/tick.mp3');
-// const tock = new Audio('sounds/tock.mp3');
-
-
-// const hiHats = new Audio('sounds/hi-hat.mp3');
-
-// //CSS functions====================================================
-
-// const hideMe = function (elem) { elem.style.visibility = 'hidden'; };
-// const showMe = function (elem) { elem.style.visibility = 'visible'; };
-
-// //Variables ============================================================
-
-// //Count
-// let count = 0;
-
-// //Interval functions========================================================
-
-// //Metronome intervals
-// function setupUpdate() {
-
-//     if (metronome.checked) {
-//         setInterval(metronomeUpdate, 600);
-//     } 
-// }
-
-// // Call setupUpdate() once after 300ms
-// setTimeout(setupUpdate, 300);
-
-// //Instrument intervals
-// setInterval(kickUpdate, 600);
-// setInterval(hiUpdate, 600);
-// setInterval(snareUpdate, 600);
-
-// //Metronome Functions======================================================
-
-// // This function is called every 600ms for the metronome
-// function metronomeUpdate() {
-   
-//     //Click track
-//     if (metronome.checked) {
-
-//         if (count == 1 || count == 2 || count == 3 || count == 5 || count == 6 || count == 7) {
-
-//             tick.play();
-
-
-//         } if (count == 4 || count == 8) {
-
-//             tock.play();
-
-//         } 
-    
-//     } 
-
-//     if (count >= 8) {
-
-//         count = 0;
-//     };
-    
-//      //Metronome display
-//     count += 1;
-
-//     //Metronome display
-//     countDisplay.textContent = "Count: " + count;
-
-  
-// };
-
-// //Functions for Samples=======================================================
-
-// //Kick Drum
-// function kickUpdate() {
-
-//     if (kick.checked && kickNumber.value < 1) {
-
-//         kickDrum.play();
-
-//     } if (kick.checked && kickNumber.value == 1 && count == 1) {
-
-//         kickDrum.play();
-
-//     } if (kick.checked && kickNumber.value == 2 && count == 2) {
-
-//         kickDrum.play();
-
-//     } if (kick.checked && kickNumber.value == 3 && count == 3) {
-
-//         kickDrum.play();
-
-//     } if (kick.checked && kickNumber.value == 4 && count == 4) {
-
-//         kickDrum.play();
-
-//     }
-// }
-
-// //Hi-hat
-// function hiUpdate() {
-
-//     if (hiHat.checked && hatNumber.value < 1) {
-
-//         hiHats.play();
-
-//     } if (hiHat.checked && hatNumber.value == 1 && count == 1) {
-
-//         hiHats.play();
-
-//     } if (hiHat.checked && hatNumber.value == 2 && count == 2) {
-
-//         hiHats.play();
-
-//     } if (hiHat.checked && hatNumber.value == 3 && count == 3) {
-
-//         hiHats.play();
-
-//     } if (hiHat.checked && hatNumber.value == 4 && count == 4) {
-
-//         hiHats.play();
-
-//     }
-
-// };
-
-// //Snare
-// function snareUpdate() {
-
-//     if (snare.checked && snareNumber.value < 1) {
-
-//         snareDrum.play();
-
-//     } if (snare.checked && snareNumber.value == 1 && count == 1) {
-
-//         snareDrum.play();
-
-//     } if (snare.checked && snareNumber.value == 2 && count == 2) {
-
-//         snareDrum.play();
-
-//     } if (snare.checked && snareNumber.value == 3 && count == 3) {
-
-//         snareDrum.play();
-
-//     } if (snare.checked && snareNumber.value == 4 && count == 4) {
-
-//         snareDrum.play();
-
-//     }
-
-// };
-
-
