@@ -2,8 +2,10 @@
 
 //Instruments
 const kickDrum = new Audio('sounds/kick-drum.mp3');
-const snareDrum = new Audio('sounds/snare-drum.mp3');
+const clap = new Audio('sounds/clap.mp3');
 const hiHats = new Audio('sounds/hi-hat.mp3');
+const snareDrum = new Audio('sounds/snare.mp3');
+const cowBell = new Audio('sounds/cowbell.mp3');
 
 // //Click track
 const tick = new Audio('sounds/tick.mp3');
@@ -19,6 +21,7 @@ const startInt = function () { intId = setInterval(metronomeUpdate, 300); }
 let count = 0;
 
 // CSS edits ==========================================================
+
 
 // Pad highlight
 $('body').click(function () {
@@ -41,7 +44,7 @@ $('body').click(function () {
 $('input[name=start]').change(function () {
     
     if (this.checked) {
-       startInt();
+    startInt();
     } else {
         count = 0;
         clearInterval(intId);
@@ -80,7 +83,151 @@ function metronomeUpdate() {
     //Count display
     $("#display-text").text("Count: " + count);
 
+    if (count == 1) {
+
+        $('body').
+            find($("input:checkbox:not(:checked)")).
+                closest('.one').
+                    css({
+                        'background-color': 'rgb(56, 111, 164)',
+                        'box-shadow': '0 0 20px rgb(191, 255, 255)'
+                        });
+
+    } if (count != 1) {
+        
+        $('body').
+            find($("input:checkbox:not(:checked)")).
+                closest('.one').
+                    css({ 'background-color': 'rgb(70, 70, 70)' });
+
+    } if (count == 2) {
+
+        $('body').
+            find($("input:checkbox:not(:checked)")).
+                closest('.two').
+                    css({
+                        'background-color': 'rgb(89, 165, 216)',
+                        'box-shadow': '0 0 20px rgb(191, 255, 255)'
+                        });
+
+
+    } if (count != 2) {
+
+        $('body').
+            find($("input:checkbox:not(:checked)")).
+                closest('.two').
+                    css({ 'background-color': 'rgb(70, 70, 70)' });
+
+    } if (count == 3) {
+
+        $('body').
+            find($("input:checkbox:not(:checked)")).
+                closest('.three').
+                    css({
+                        'background-color': 'rgb(132, 210, 246)',
+                        'box-shadow': '0 0 20px rgb(191, 255, 255)'
+                        });
+
+
+    } if (count != 3) {
+
+        $('body').
+            find($("input:checkbox:not(:checked)")).
+                closest('.three').
+                    css({ 'background-color': 'rgb(70, 70, 70)' });
+
+    }; if (count == 4) {
+
+        $('body').
+            find($("input:checkbox:not(:checked)")).
+                closest('.four').
+                css({
+                    'background-color': 'rgb(145, 229, 246)',
+                    'box-shadow': '0 0 20px rgb(191, 255, 255)'
+                    });
+
+
+    } if (count != 4) {
+
+        $('body').
+            find($("input:checkbox:not(:checked)")).
+                closest('.four').
+                    css({ 'background-color': 'rgb(70, 70, 70)' });
+    
+    } if (count == 5) {
+
+        $('body').
+            find($("input:checkbox:not(:checked)")).
+                closest('.five').
+                    css({
+                        'background-color': 'rgb(56, 111, 164)',
+                        'box-shadow': '0 0 20px rgb(191, 255, 255)'
+                        });
+
+    } if (count != 5) {
+
+        $('body').
+            find($("input:checkbox:not(:checked)")).
+                closest('.five').
+                    css({ 'background-color': 'rgb(70, 70, 70)' });
+
+    } if (count == 6) {
+
+        $('body').
+            find($("input:checkbox:not(:checked)")).
+                closest('.six').
+                css({
+                    'background-color': 'rgb(89, 165, 216)',
+                    'box-shadow': '0 0 20px rgb(191, 255, 255)'
+                    });
+
+
+    } if (count != 6) {
+
+        $('body').
+            find($("input:checkbox:not(:checked)")).
+                closest('.six').
+                    css({ 'background-color': 'rgb(70, 70, 70)' });
+
+    } if (count == 7) {
+
+        $('body').
+            find($("input:checkbox:not(:checked)")).
+                closest('.seven').
+                css({
+                    'background-color': 'rgb(132, 210, 246)',
+                    'box-shadow': '0 0 20px rgb(191, 255, 255)'
+                    });
+
+
+    } if (count != 7) {
+
+        $('body').
+            find($("input:checkbox:not(:checked)")).
+                closest('.seven').
+                    css({ 'background-color': 'rgb(70, 70, 70)' });
+
+    } if (count == 8) {
+
+        $('body').
+            find($("input:checkbox:not(:checked)")).
+                closest('.eight').
+                css({
+                    'background-color': 'rgb(145, 229, 246)',
+                    'box-shadow': '0 0 20px rgb(191, 255, 255)'
+                    });
+
+
+    } if (count != 8) {
+
+        $('body').
+            find($("input:checkbox:not(:checked)")).
+                closest('.eight').
+                    css({ 'background-color': 'rgb(70, 70, 70)' });
+    };
+
 };
+
 
 //Kick Drum
 setInterval(kickUpdate, 300);
@@ -115,35 +262,35 @@ function kickUpdate() {
 
 };
 
-//Snare Drum
-setInterval(snareUpdate, 300);
+//Clap
+setInterval(clapUpdate, 300);
 
-function snareUpdate() {
+function clapUpdate() {
 
-    if ($('#snare-1').prop('checked') && count == 1) {
-        snareDrum.load();
-        snareDrum.play();
-    } if ($('#snare-2').prop('checked') && count == 2) {
-        snareDrum.load();
-        snareDrum.play();
-    } if ($('#snare-3').prop('checked') && count == 3) {
-        snareDrum.load();
-        snareDrum.play();
-    } if ($('#snare-4').prop('checked') && count == 4) {
-        snareDrum.load();
-        snareDrum.play();
-    } if ($('#snare-5').prop('checked') && count == 5) {
-        snareDrum.load();
-        snareDrum.play();
-    } if ($('#snare-6').prop('checked') && count == 6) {
-        snareDrum.load();
-        snareDrum.play();
-    } if ($('#snare-7').prop('checked') && count == 7) {
-        snareDrum.load();
-        snareDrum.play();
-    } if ($('#snare-8').prop('checked') && count == 8) {
-        snareDrum.load();
-        snareDrum.play();
+    if ($('#clap-1').prop('checked') && count == 1) {
+        clap.load();
+        clap.play();
+    } if ($('#clap-2').prop('checked') && count == 2) {
+        clap.load();
+        clap.play();
+    } if ($('#clap-3').prop('checked') && count == 3) {
+        clap.load();
+        clap.play();
+    } if ($('#clap-4').prop('checked') && count == 4) {
+        clap.load();
+        clap.play();
+    } if ($('#clap-5').prop('checked') && count == 5) {
+        clap.load();
+        clap.play();
+    } if ($('#clap-6').prop('checked') && count == 6) {
+        clap.load();
+        clap.play();
+    } if ($('#clap-7').prop('checked') && count == 7) {
+        clap.load();
+        clap.play();
+    } if ($('#clap-8').prop('checked') && count == 8) {
+        clap.load();
+        clap.play();
     }
 
 };
@@ -180,3 +327,71 @@ function hiUpdate() {
     }
 
 };
+
+//snare
+setInterval(snareUpdate, 300);
+
+function snareUpdate() {
+
+    if ($('#snare-1').prop('checked') && count == 1) {
+        snareDrum.load();
+        snareDrum.play();
+    } if ($('#snare-2').prop('checked') && count == 2) {
+        snareDrum.load();
+        snareDrum.play();
+    } if ($('#snare-3').prop('checked') && count == 3) {
+        snareDrum.load();
+        snareDrum.play();
+    } if ($('#snare-4').prop('checked') && count == 4) {
+        snareDrum.load();
+        snareDrum.play();
+    } if ($('#snare-5').prop('checked') && count == 5) {
+        snareDrum.load();
+        snareDrum.play();
+    } if ($('#snare-6').prop('checked') && count == 6) {
+        snareDrum.load();
+        snareDrum.play();
+    } if ($('#snare-7').prop('checked') && count == 7) {
+        snareDrum.load();
+        snareDrum.play();
+    } if ($('#snare-8').prop('checked') && count == 8) {
+        snareDrum.load();
+        snareDrum.play();
+    }
+
+};
+
+//cowbell
+setInterval(cowbellUpdate, 300);
+
+function cowbellUpdate() {
+
+    if ($('#cowbell-1').prop('checked') && count == 1) {
+        cowBell.load();
+        cowBell.play();
+    } if ($('#cowbell-2').prop('checked') && count == 2) {
+        cowBell.load();
+        cowBell.play();
+    } if ($('#cowbell-3').prop('checked') && count == 3) {
+        cowBell.load();
+        cowBell.play();
+    } if ($('#cowbell-4').prop('checked') && count == 4) {
+        cowBell.load();
+        cowBell.play();
+    } if ($('#cowbell-5').prop('checked') && count == 5) {
+        cowBell.load();
+        cowBell.play();
+    } if ($('#cowbell-6').prop('checked') && count == 6) {
+        cowBell.load();
+        cowBell.play();
+    } if ($('#cowbell-7').prop('checked') && count == 7) {
+        cowBell.load();
+        cowBell.play();
+    } if ($('#cowbell-8').prop('checked') && count == 8) {
+        cowBell.load();
+        cowBell.play();
+    }
+
+};
+
+//Lights
