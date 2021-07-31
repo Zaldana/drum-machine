@@ -83,7 +83,9 @@ function metronomeUpdate() {
     //Count display
     $("#display-text").text("Count: " + count);
 
+// Count animation ===========================================================================
 
+    //Column 1
     if (count == 1) {
 
         $('body').
@@ -92,7 +94,7 @@ function metronomeUpdate() {
                     css({
                         'background-color': 'rgb(242, 255, 73)',
                         'box-shadow': '0 0 20px rgb(191, 255, 255)'
-                        });
+                    });
 
     } if (count != 1) {
         
@@ -101,6 +103,7 @@ function metronomeUpdate() {
                 closest('.one').
                     css({ 'background-color': 'rgb(70, 70, 70)' });
 
+    //Column 2
     } if (count == 2) {
 
         $('body').
@@ -109,8 +112,7 @@ function metronomeUpdate() {
                     css({
                         'background-color': 'rgb(89, 165, 216)',
                         'box-shadow': '0 0 20px rgb(191, 255, 255)'
-                        });
-
+                    });
 
     } if (count != 2) {
 
@@ -119,6 +121,7 @@ function metronomeUpdate() {
                 closest('.two').
                     css({ 'background-color': 'rgb(70, 70, 70)' });
 
+    //Column 3
     } if (count == 3) {
 
         $('body').
@@ -127,8 +130,7 @@ function metronomeUpdate() {
                     css({
                         'background-color': 'rgb(132, 210, 246)',
                         'box-shadow': '0 0 20px rgb(191, 255, 255)'
-                        });
-
+                    });
 
     } if (count != 3) {
 
@@ -137,6 +139,7 @@ function metronomeUpdate() {
                 closest('.three').
                     css({ 'background-color': 'rgb(70, 70, 70)' });
 
+    //Column 4
     }; if (count == 4) {
 
         $('body').
@@ -145,8 +148,7 @@ function metronomeUpdate() {
                 css({
                     'background-color': 'rgb(145, 229, 246)',
                     'box-shadow': '0 0 20px rgb(191, 255, 255)'
-                    });
-
+                });
 
     } if (count != 4) {
 
@@ -155,6 +157,7 @@ function metronomeUpdate() {
                 closest('.four').
                     css({ 'background-color': 'rgb(70, 70, 70)' });
     
+    //Column 5
     } if (count == 5) {
 
         $('body').
@@ -163,7 +166,7 @@ function metronomeUpdate() {
                     css({
                         'background-color': 'rgb(242, 255, 73)',
                         'box-shadow': '0 0 20px rgb(191, 255, 255)'
-                        });
+                    });
 
     } if (count != 5) {
 
@@ -172,6 +175,7 @@ function metronomeUpdate() {
                 closest('.five').
                     css({ 'background-color': 'rgb(70, 70, 70)' });
 
+    //Column 6
     } if (count == 6) {
 
         $('body').
@@ -180,8 +184,7 @@ function metronomeUpdate() {
                 css({
                     'background-color': 'rgb(89, 165, 216)',
                     'box-shadow': '0 0 20px rgb(191, 255, 255)'
-                    });
-
+                });
 
     } if (count != 6) {
 
@@ -190,6 +193,7 @@ function metronomeUpdate() {
                 closest('.six').
                     css({ 'background-color': 'rgb(70, 70, 70)' });
 
+    //Column 7
     } if (count == 7) {
 
         $('body').
@@ -198,8 +202,7 @@ function metronomeUpdate() {
                 css({
                     'background-color': 'rgb(132, 210, 246)',
                     'box-shadow': '0 0 20px rgb(191, 255, 255)'
-                    });
-
+                });
 
     } if (count != 7) {
 
@@ -208,6 +211,7 @@ function metronomeUpdate() {
                 closest('.seven').
                     css({ 'background-color': 'rgb(70, 70, 70)' });
 
+    //Column 8
     } if (count == 8) {
 
         $('body').
@@ -216,7 +220,7 @@ function metronomeUpdate() {
                 css({
                     'background-color': 'rgb(145, 229, 246)',
                     'box-shadow': '0 0 20px rgb(191, 255, 255)'
-                    });
+                });
 
 
     } if (count != 8) {
