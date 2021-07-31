@@ -83,13 +83,14 @@ function metronomeUpdate() {
     //Count display
     $("#display-text").text("Count: " + count);
 
+
     if (count == 1) {
 
         $('body').
             find($("input:checkbox:not(:checked)")).
                 closest('.one').
                     css({
-                        'background-color': 'rgb(56, 111, 164)',
+                        'background-color': 'rgb(242, 255, 73)',
                         'box-shadow': '0 0 20px rgb(191, 255, 255)'
                         });
 
@@ -160,7 +161,7 @@ function metronomeUpdate() {
             find($("input:checkbox:not(:checked)")).
                 closest('.five').
                     css({
-                        'background-color': 'rgb(56, 111, 164)',
+                        'background-color': 'rgb(242, 255, 73)',
                         'box-shadow': '0 0 20px rgb(191, 255, 255)'
                         });
 
